@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Gill Sans', 'Gill Sans MT',  'Trebuchet MS', 'sans-serif'; */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body{
+ display: flex;
+ align-items: center;   
+ justify-content: center;
+ min-height: 100vh;
+ background: lightblue;
+}
+
+.container{
+    width:fit-content;
+    border-radius: 10px;
+    background: wheat;
+    border: 2px solid red;
+    justify-content: center;
+}
+.container h2{
+    font-size: 25px;
+    font-weight: 500;
+    padding: 18px 25px;
+    border-bottom: 1px solid red;
+}
+.container .content{
+    margin: 25px 20px 35px;
+}
+.content .word{
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center ;
+    letter-spacing: 10px;
+    justify-content: center;
+    text-transform: uppercase;
+}
+.content .details{
+    margin: 25px 0 20px;
+}
+.details p{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.details p strong{
+    font-weight: 500;
+}
+.content input{
+    width:  100%;
+    height:  40px;
+    outline: none;
+    padding: 0 16px;
+    border-radius: 10px;
+    border: 1px solid red;
+}
+.content .buttons{
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+.buttons button{
+    border: none;
+    outline: none;
+    padding: 5px 0;
+    font-size: 17px;
+    border-radius: 50%;
+    width: calc(100% /2 - 8px); 
+    color: white;
+    cursor: pointer;
+}
+.buttons .refresh-word{
+    background: blue;
+}
+.buttons .check-word{
+    background: red;
+}
+
+
+
