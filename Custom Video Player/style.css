@@ -22,14 +22,27 @@ body, .video-controls, .video-timer, .options{
     background: black;
     border-radius : 10px;
     overflow: hidden;
-    
+}
+.container.fullscreen{
+    max-width: 100%;
+    width: 100%;
 }
 .wrapper{
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -15px;
     z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.08s ease;
+}
+.container.show-controls .wrapper {
+    bottom: 0px;
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.13s ease;
+
 }
 .wrapper::before{
     content: "";
@@ -60,7 +73,7 @@ body, .video-controls, .video-timer, .options{
     transform: translate(-50%);
 }
 .progress-area .progress-bar{
-    width: 50%;
+    width: 0%;
     height: 100%;
     position: relative;
     background: red;
@@ -140,10 +153,9 @@ body, .video-controls, .video-timer, .options{
     border-radius: 5px;
     transform: opacity 0.13s ease;
 }
-.playback-content button:hover ~ .speed-options{
+.playback-content .speed-options.show{
     opacity: 1;
     pointer-events: auto;
-
 }
 .speed-options li{
     cursor: pointer;
